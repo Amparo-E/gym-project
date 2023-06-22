@@ -5,7 +5,7 @@ import React, { useState } from "react"
 
 
 export const DataProvider = ({ children }: {children: React.ReactNode}) => {
-    const [ data, setData ] = useState(null)
+    const [ data, setData ] = useState({})
     return (
         <DataContext.Provider value={{ data, setData }}>
             {children}

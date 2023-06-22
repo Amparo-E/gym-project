@@ -23,7 +23,6 @@ export const FileUpload = () => {
       if (response.ok) {
         const result = await response.json();
         setData(result)
-        
       }
     } catch (err) {
       console.log(err);
