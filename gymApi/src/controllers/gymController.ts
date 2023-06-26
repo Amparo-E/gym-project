@@ -29,9 +29,9 @@ export const convertHTMLtoJSON = (rows: NodeListOf<HTMLTableRowElement>) => {
       for (let currentDay of days) { 
         const offset = days.indexOf(currentDay) > 0 ? 5 : 0;
         const json = {
-          "Ejercicios": cells[0 + offset]?.textContent.trim(),
-          "Series": cells[1 + offset]?.textContent.trim(),
-          "Repeticiones": cells[2 + offset]?.textContent.trim(),
+          "ejercicios": cells[0 + offset]?.textContent.trim(),
+          "series": cells[1 + offset]?.textContent.trim(),
+          "repeticiones": cells[2 + offset]?.textContent.trim(),
         };
 
         if (jsonResult[currentDay] == null) jsonResult[currentDay] = [];
@@ -45,8 +45,7 @@ export const convertHTMLtoJSON = (rows: NodeListOf<HTMLTableRowElement>) => {
 export const sortJsonByDay = (jsonResult) => {
     let sortJson = {}
       Object.keys(jsonResult).sort().forEach(key => {
-        const newKey = key.replace(" ", "")
-        sortJson[newKey] = jsonResult[key]
+        sortJson[key] = jsonResult[key]
       })
 
       return sortJson
