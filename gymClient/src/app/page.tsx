@@ -8,9 +8,7 @@ import { useData } from "@/customHooks/useData";
 export default function Home() {
   const { data } = useData()
   const thereIsData = Object.keys(data || {}).length
-  console.log(data);
   
   return !thereIsData ? <FileUpload/> : <DisplayData/>
-  
 }
 
