@@ -4,12 +4,10 @@
 
 @layer components {
   .navbar_icon {
-    @apply relative flex items-center justify-center 
+    @apply  flex items-center justify-center 
             h-12 w-12 my-2 mx-auto shadow-lg 
-            bg-gray-800 text-green-500 
-            hover:bg-green-800 hover:text-white
-            rounded-2xl hover:rounded-xl
+            text-[#f8ad64] rounded-2xl hover:rounded-xl
             transition-all duration-300 ease-linear
-            cursor-pointer 
+            cursor-pointer
   }
 }

@@ -15,7 +15,7 @@ export const FileUpload = () => {
     formData.append("docxFile", file);
 
     try {
-      const response = await fetch("http://localhost:3001/api/convert", {
+      const response = await fetch("http://192.168.0.86:3001/api/convert", {
         method: "POST",
         body: formData,
       });
