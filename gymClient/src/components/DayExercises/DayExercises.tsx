@@ -4,9 +4,8 @@ export const DayExercises = ({ routines }: any) => {
   const { userSelectedExercise, setUserSelectedExercise } = useData();
 
   const backgroundChange = (selectedExercise: number[], index: number) => {
-    if (selectedExercise.includes(index)) return "bg-green-200";
-    else return 'bg-[#263141] text-white'
-      // return "bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white";
+    if (selectedExercise.includes(index)) return "bg-[#f8ad64]";
+    else return 'bg-gray-200'
   };
 
   const handleSelectedExercise = (index: number) => {
@@ -23,12 +22,12 @@ export const DayExercises = ({ routines }: any) => {
         <div
           key={index}
           onClick={() => handleSelectedExercise(index)}
-          className={`flex flex-col justify-around m-1 px-2 w-36 h-40 rounded-xl cursor-pointer shadow ${backgroundChange(userSelectedExercise, index)}`}
+          className={`flex flex-col justify-evenly m-1 px-2 w-36 h-44 rounded-xl cursor-pointer shadow bg-[#263141] text-white`}
         >
-          <p>{exercise.ejercicios}</p>
+          <p className="font-sans font-medium text-sm">{exercise.ejercicios}</p>
           <p>Series: {exercise.series}</p>
           <p>Repeticiones: {exercise.repeticiones}</p>
-          <div className="w-full bg-[#f8ad64] h-px"></div>
+          <div className={`w-full h-1 rounded-lg ${backgroundChange(userSelectedExercise, index)}`}></div>
         </div>
       ))}
     </div>

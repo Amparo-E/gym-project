@@ -8,6 +8,6 @@
             h-12 w-12 my-2 mx-auto shadow-lg 
             text-[#f8ad64] rounded-2xl hover:rounded-xl
             transition-all duration-300 ease-linear
-            cursor-pointer
+            cursor-pointer font-sans font-medium text-sm
   }
 }
