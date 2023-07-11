@@ -1,13 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @layer components {
   .navbar_icon {
     @apply  flex items-center justify-center 
-            h-12 w-12 my-2 mx-auto shadow-lg 
-            text-[#f8ad64] rounded-2xl hover:rounded-xl
+            h-12 w-12 my-2 mx-auto shadow-2xl 
+            text-gray-200 rounded-xl 
             transition-all duration-300 ease-linear
-            cursor-pointer font-sans font-medium text-sm
+            cursor-pointer font-sans font-medium
   }
 }
