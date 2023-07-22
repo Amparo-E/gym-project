@@ -10,7 +10,7 @@ export default function Home() {
   const thereIsData = Object.keys(data || {}).length
   
   return (
-    <div className="min-h-screen max-w-screen overflow-hidden bg-[#161320] pb-16 text-white"> 
+    <div className="min-h-screen max-w-screen overflow-hidden bg-[#f9f9f9] pb-16 text-white"> 
       { !thereIsData ? <FileUpload/> : <DisplayData/> }
     </div>
   ) 

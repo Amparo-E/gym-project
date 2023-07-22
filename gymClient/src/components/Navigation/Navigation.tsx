@@ -12,17 +12,24 @@ export const Navigation = () => {
   };
 
   return (
-    <div className="flex items-center justify-center fixed bottom-0 left-0 w-screen flex shadow-2xl bg-[#161320] p-2 z-10">
+    <div className="flex items-center justify-evenly w-screen mt-6">
       {entries.map(([day], i) => (
         <div
           key={i}
-          className={`navbar_icon ${selectedDay === day && "bg-[#161320] rounded-lg text-[#f8ad64]"}`}
+          className={`navbar_icon ${selectedDay === day && "bg-[#7076fe] text-white rounded-lg"}`}
           onClick={() => handleSelectDay(day)}
         >
           {day}
         </div>
       ))}
-      <button onClick={() => setData({})}><ArrowBackward/></button>
+      <button onClick={() => {
+        setData(null)
+        setSelectedDay('')
+        }}>
+          <ArrowBackward/>
+          </button>
     </div>
   );
 };
+
+

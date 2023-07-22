@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 export const FormFile = () => {
   const fileInput = useRef<HTMLInputElement>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const { setData } = useData();
+  const { data, setData } = useData();
 
   const handleSubmitUpload = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
