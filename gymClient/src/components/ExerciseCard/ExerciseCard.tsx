@@ -2,8 +2,8 @@ import { useData } from "@/customHooks/useData";
 
 interface Exercise {
     "ejercicios": string,
-    "series": string,
-    "repeticiones": string,
+    "series": number,
+    "repeticiones": number,
 }
 
 interface Props {

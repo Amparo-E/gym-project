@@ -12,7 +12,7 @@ export const Navigation = () => {
   };
 
   return (
-    <div className="flex items-center justify-evenly w-screen mt-6">
+    <div className="flex items-center justify-evenly w-screen mt-6 max-w-[600px]">
       {entries.map(([day], i) => (
         <div
           key={i}
