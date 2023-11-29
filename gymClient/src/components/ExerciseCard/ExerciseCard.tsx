@@ -16,8 +16,8 @@ export const ExerciseCard = ({ exercise, i }: Props) => {
     const { userSelectedExercise, setUserSelectedExercise } = useData();
 
     const backgroundChange = (selectedExercise: number[], index: number) => {
-      if (selectedExercise.includes(index)) return "bg-[#7076fe]";
-      else return 'bg-gray-200'
+      if (selectedExercise.includes(index)) return "bg-orange-600";
+      else return 'bg-white'
     };
   
     const handleSelectedExercise = (index: number) => {
@@ -31,7 +31,7 @@ export const ExerciseCard = ({ exercise, i }: Props) => {
         <div
           key={i}
           onClick={() => handleSelectedExercise(i)}
-          className={`flex flex-col justify-evenly m-1 px-2 w-40 h-44 rounded-xl cursor-pointer shadow bg-[#4b556b] text-white`}
+          className={`flex flex-col justify-evenly m-1 px-2 w-40 h-44 rounded-xl cursor-pointer shadow bg-orange-100 text-[#1f1f1f] `}
         >
           <p className="font-sans font-medium text-sm">{ejercicios}</p>
           <p>Series: {series}</p>

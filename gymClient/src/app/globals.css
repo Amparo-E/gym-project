@@ -6,8 +6,7 @@
 @layer components {
   .navbar_icon {
     @apply  flex items-center justify-center flex-wrap
-            h-auto w-16 py-2 shadow-md 
-            text-[#4b556b] rounded-xl 
+            h-auto w-16 py-2 shadow rounded-xl 
             transition-all duration-300 ease-linear
             cursor-pointer font-sans font-medium
   }
